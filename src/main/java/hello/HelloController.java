@@ -69,5 +69,13 @@ public class HelloController {
         return jsonStrings.calc(jsonStrings.getWordone(), jsonStrings.getWordtwo());
     }
 
+
+    @PostMapping(path = "/jsonmultiply", produces = MediaType.APPLICATION_JSON_VALUE)
+    public int mult(@RequestBody MultJsonTwoNum multiplicationJsonTwoNum) {
+
+        return multiplicationJsonTwoNum.calc(multiplicationJsonTwoNum.getOne(), multiplicationJsonTwoNum.getTwo());
+
+    }
+
 }
 
