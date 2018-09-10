@@ -65,23 +65,30 @@ public class HelloController {
     @PostMapping(path = "/jsoncalc", produces = MediaType.APPLICATION_JSON_VALUE)
     public int addition(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
 
-        return additionJsonTwoNum.calc(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo());
+        return additionJsonTwoNum.add(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo());
 
     }
 
 
     @PostMapping(path = "/jsonstring", produces = MediaType.APPLICATION_JSON_VALUE)
     public String attatch(@RequestBody JsonStrings jsonStrings) {
-        return jsonStrings.calc(jsonStrings.getWordone(), jsonStrings.getWordtwo());
+        return jsonStrings.combine(jsonStrings.getOne(), jsonStrings.getTwo());
     }
 
 
     @PostMapping(path = "/jsonmultiply", produces = MediaType.APPLICATION_JSON_VALUE)
-    public int mult(@RequestBody MultJsonTwoNum multiplicationJsonTwoNum) {
+    public int mult(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
 
-        return multiplicationJsonTwoNum.calc(multiplicationJsonTwoNum.getOne(), multiplicationJsonTwoNum.getTwo());
+        return additionJsonTwoNum.mult(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo());
 
     }
+
+
+
+
+
+
+
 
     @Component
     public static class IpGrabber {
@@ -107,5 +114,6 @@ public class HelloController {
         }
 
     }
+
 }
 

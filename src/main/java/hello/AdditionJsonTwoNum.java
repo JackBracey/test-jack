@@ -23,8 +23,12 @@ public class AdditionJsonTwoNum {
         return Two;
     }
 
-    public int calc(int one, int two) {
+    public int add(int one, int two) {
         return (one + two);
+    }
+
+    public int mult(int one, int two) {
+        return (one * two);
     }
 
 
