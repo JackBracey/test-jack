@@ -69,7 +69,6 @@ public class HelloController {
 
     }
 
-
     @PostMapping(path = "/jsonstring", produces = MediaType.APPLICATION_JSON_VALUE)
     public String attatch(@RequestBody JsonStrings jsonStrings) {
         return jsonStrings.combine(jsonStrings.getOne(), jsonStrings.getTwo());
@@ -81,6 +80,11 @@ public class HelloController {
 
         return additionJsonTwoNum.mult(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo());
 
+    }
+
+    @PostMapping(path = "/jsonaddthree", produces = MediaType.APPLICATION_JSON_VALUE)
+    public int addthree(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
+        return additionJsonTwoNum.addthree(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo(), additionJsonTwoNum.getThree());
     }
 
 
