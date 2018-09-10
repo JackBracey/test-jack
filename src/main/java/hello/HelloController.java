@@ -62,7 +62,7 @@ public class HelloController {
 
 
 
-    @PostMapping(path = "/jsoncalc", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/jsonaddtwo", produces = MediaType.APPLICATION_JSON_VALUE)
     public int addition(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
 
         return additionJsonTwoNum.add(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo());
@@ -87,9 +87,15 @@ public class HelloController {
         return additionJsonTwoNum.addthree(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo(), additionJsonTwoNum.getThree());
     }
 
-
-
-
+    @PostMapping(path = "/jsonaddfour", produces = MediaType.APPLICATION_JSON_VALUE)
+    public int addfour(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
+        return additionJsonTwoNum.addfour(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo(), additionJsonTwoNum.getThree(), additionJsonTwoNum.getFour());
+    }
+//
+    @PostMapping(path = "/jsonaddfive", produces = MediaType.APPLICATION_JSON_VALUE)
+    public int addfive(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
+        return additionJsonTwoNum.addfive(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo(), additionJsonTwoNum.getThree(), additionJsonTwoNum.getFour(), additionJsonTwoNum.getFive());
+    }
 
 
 
