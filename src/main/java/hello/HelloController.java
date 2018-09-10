@@ -62,42 +62,40 @@ public class HelloController {
 
 
 
-    @PostMapping(path = "/jsonaddtwo", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/jsonaddtwo", produces = MediaType.TEXT_PLAIN_VALUE)
     public int addition(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
 
         return additionJsonTwoNum.add(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo());
 
     }
 
-    @PostMapping(path = "/jsonstring", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/jsonstring", produces = MediaType.TEXT_PLAIN_VALUE)
     public String attatch(@RequestBody JsonStrings jsonStrings) {
         return jsonStrings.combine(jsonStrings.getOne(), jsonStrings.getTwo());
     }
 
 
-    @PostMapping(path = "/jsonmultiply", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/jsonmultiply", produces = MediaType.TEXT_PLAIN_VALUE)
     public int mult(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
 
         return additionJsonTwoNum.mult(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo());
 
     }
 
-    @PostMapping(path = "/jsonaddthree", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/jsonaddthree", produces = MediaType.TEXT_PLAIN_VALUE)
     public int addthree(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
         return additionJsonTwoNum.addthree(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo(), additionJsonTwoNum.getThree());
     }
 
-    @PostMapping(path = "/jsonaddfour", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/jsonaddfour", produces = MediaType.TEXT_PLAIN_VALUE)
     public int addfour(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
         return additionJsonTwoNum.addfour(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo(), additionJsonTwoNum.getThree(), additionJsonTwoNum.getFour());
     }
-//
-    @PostMapping(path = "/jsonaddfive", produces = MediaType.APPLICATION_JSON_VALUE)
+
+    @PostMapping(path = "/jsonaddfive", produces = MediaType.TEXT_PLAIN_VALUE)
     public int addfive(@RequestBody AdditionJsonTwoNum additionJsonTwoNum) {
         return additionJsonTwoNum.addfive(additionJsonTwoNum.getOne(), additionJsonTwoNum.getTwo(), additionJsonTwoNum.getThree(), additionJsonTwoNum.getFour(), additionJsonTwoNum.getFive());
     }
-
-
 
 
     @Component
