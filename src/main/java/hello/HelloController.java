@@ -49,6 +49,12 @@ public class HelloController {
 
     }
 
+    @GetMapping("/exampleall")
+    public String exampleall() {
+        ExampleRequest exampleRequest = new ExampleRequest();
+        return exampleRequest.getExamples().get(15);
+    }
+
 
     //Post requests
     @PostMapping("/post/{mesg}")

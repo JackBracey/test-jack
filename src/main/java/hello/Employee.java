@@ -3,18 +3,20 @@ package hello;
 public class Employee {
 
     private String id;
-    private String name;
+    private String title;
+    private String forename;
+    private String surname;
 
     public Employee() {
 
     }
 
-
-    public Employee(String id, String name) {
+    public Employee(String id, String title, String forename, String surname) {
         this.id = id;
-        this.name = name;
+        this.title = title;
+        this.forename = forename;
+        this.surname = surname;
     }
-
 
     public String getId() {
         return id;
@@ -24,12 +26,27 @@ public class Employee {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
+    public String getForename() {
+        return forename;
+    }
+
+    public void setForename(String forename) {
+        this.forename = forename;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
 }
