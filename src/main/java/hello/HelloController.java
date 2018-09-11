@@ -45,7 +45,7 @@ public class HelloController {
 
         ExampleRequest exampleRequest = new ExampleRequest();
 
-        return " -------------------\n|    " + exampleRequest.getExample(pos) + "     |\n -------------------";
+        return " |-------------------|\n    " + exampleRequest.getExample(pos) + "     \n |-------------------|";
 
     }
 
