@@ -109,7 +109,10 @@ public class HelloController {
         return employee;
     }
 
-
+    @PostMapping(path = "/personal", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Personal personal(@RequestBody Personal personal) {
+        return personal;
+    }
 
     @Component
     public static class IpGrabber {
