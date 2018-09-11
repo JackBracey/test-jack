@@ -2,27 +2,27 @@ package hello;
 
 public class JsonStrings {
 
-    private String One;
-    private String Two;
+    private String one;
+    private String two;
 
     public String getOne() {
-        return One;
+        return one;
     }
 
     public void setOne(String one) {
-        One = one;
+        this.one = one;
     }
 
     public String getTwo() {
-        return Two;
+        return two;
     }
 
     public void setTwo(String two) {
-        Two = two;
+        this.two = two;
     }
 
-    public String combine(String wordOne, String wordTwo) {
-        return (wordOne + wordTwo);
+    public String combine() {
+        return (one + two);
     }
 
 }

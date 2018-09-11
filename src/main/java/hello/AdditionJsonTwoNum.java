@@ -2,27 +2,27 @@ package hello;
 
 public class AdditionJsonTwoNum {
 
-    private int One;
-    private int Two;
+    private int one;
+    private int two;
     private int three;
     private int four;
     private int five;
 
     //Getters Setters
     public void setOne(int one) {
-        One = one;
+        this.one = one;
     }
 
     public void setTwo(int two) {
-        Two = two;
+        this.two = two;
     }
 
     public int getOne() {
-        return One;
+        return one;
     }
 
     public int getTwo() {
-        return Two;
+        return two;
     }
 
     public int getThree() {
@@ -50,23 +50,23 @@ public class AdditionJsonTwoNum {
     }
 
     //Functions
-    public int add(int one, int two) {
+    public int add() {
         return (one + two);
     }
 
-    public int mult(int one, int two) {
+    public int mult() {
         return (one * two);
     }
 
-    public int addthree(int one, int two, int three) {
+    public int addthree() {
         return (one + two + three);
     }
 
-    public int addfour(int one, int two, int three, int four) {
+    public int addfour() {
         return (one + two + three + four);
     }
 
-    public int addfive(int one, int two, int three, int four, int five) {
+    public int addfive() {
         return (one + two + three + four + five);
     }
 
