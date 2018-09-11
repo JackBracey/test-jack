@@ -16,7 +16,7 @@ public class HelloController {
 
     @RequestMapping("/jack")
     public String jack() {
-        return "Welcome Jack";
+        return "Welcome \"Jack\"";
     }
 
     @RequestMapping("/")
